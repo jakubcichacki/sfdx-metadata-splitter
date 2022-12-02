@@ -9,6 +9,10 @@ export default abstract class SplittingCommand extends SfdxCommand {
 	protected abstract getSplitter(): Splitter;
 
 	async run() {
+		var realFs = require('fs');
+		var gracefulFs = require('graceful-fs');
+		gracefulFs.gracefulify(realFs);
+
 		const filesToSplit = await this.getFilesToSplit();
 		const splitter = this.getSplitter();
 

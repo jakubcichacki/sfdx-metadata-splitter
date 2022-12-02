@@ -6,6 +6,7 @@
 	"bugs": "https://github.com/Ziemniakoss/sfdx-metadata-splitter/issues",
 	"dependencies": {
 		"@salesforce/command": "^5.2.24",
+		"graceful-fs": "^4.2.4",
 		"xml2js": "^0.4.23"
 	},
 	"devDependencies": {
